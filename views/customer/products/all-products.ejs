@@ -1,0 +1,20 @@
+<%- include('../../shared/includes/head', { pageTitle: 'All Products' }) %>
+
+<meta name="description" content="Come find your favorite alcohol imported straight from Japan and South Korea!">
+
+<link rel="stylesheet" href="/styles/products.css">
+    </head>
+
+    <body>
+        <%- include('../../shared/includes/header') %>
+            <main>
+                <h1 style="color: var(--color-primary-400);">All Products</h1>
+                <ul id="products-grid">
+                    <% for (const product of products) { %> 
+                        <li>
+                            <%- include('../../shared/includes/product-item', { product: product }) %> 
+                        </li>
+                    <% } %> 
+                </ul>
+            </main>
+            <%- include('../../shared/includes/footer') %>
